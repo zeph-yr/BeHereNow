@@ -32,7 +32,7 @@ namespace BeHereNow
                 rotation = Quaternion.AngleAxis(55, Vector3.up);
 
                 //Size (100,100) and position (0f, 1.05f, 1.95f) is good for a huge-to-the-floor panel where the player is standing lol
-                floatingScreen = FloatingScreen.CreateFloatingScreen(new Vector2(120, 90), false, new Vector3(3.4f, 1.30f, 1.95f), rotation);
+                floatingScreen = FloatingScreen.CreateFloatingScreen(new Vector2(120, 90), false, new Vector3(3.45f, 1.30f, 2.1f), rotation);
                 GameObject.DontDestroyOnLoad(floatingScreen.gameObject);
 
                 screenViewController = BeatSaberUI.CreateViewController<ScreenViewController>();
@@ -62,6 +62,16 @@ namespace BeHereNow
         {
             Plugin.Log.Debug("Screen not active");
 
+            floatingScreen.gameObject.SetActive(false);
+        }
+
+        internal void Show()
+        {
+            floatingScreen.gameObject.SetActive(true);
+        }
+
+        internal void Hide()
+        {
             floatingScreen.gameObject.SetActive(false);
         }
     }

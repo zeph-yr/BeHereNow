@@ -25,6 +25,16 @@ namespace BeHereNow
         void Set_Enabled(bool value)
         {
             Enabled = value;
+
+            if (value)
+            {
+                ScreenController.Instance.Show();
+            }
+            else
+            {
+                ScreenController.Instance.Hide();
+            }
+            
         }
     }
 }
