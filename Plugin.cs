@@ -27,7 +27,7 @@ namespace BeHereNow
         [OnEnable]
         public void OnEnable()
         {
-            BeatSaberMarkupLanguage.GameplaySetup.GameplaySetup.instance.AddTab("BeHereNow", "BeHereNow.ModUI.bsml", ModUI.instance);
+            BeatSaberMarkupLanguage.GameplaySetup.GameplaySetup.instance.AddTab("BeHereNow", "BeHereNow.ModUI.bsml", ModUI.instance, BeatSaberMarkupLanguage.GameplaySetup.MenuType.Solo);
 
             BS_Utils.Utilities.BSEvents.lateMenuSceneLoadedFresh += BSEvents_lateMenuSceneLoadedFresh;
         }
@@ -35,8 +35,6 @@ namespace BeHereNow
 
         private void BSEvents_lateMenuSceneLoadedFresh(ScenesTransitionSetupDataSO obj)
         {
-            Plugin.Log.Debug("Menu loaded");
-
             ScreenController.Instance.Create_Screen();
         }
 

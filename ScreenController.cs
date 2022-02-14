@@ -1,6 +1,7 @@
 ﻿using BeatSaberMarkupLanguage;
 using BeatSaberMarkupLanguage.FloatingScreen;
 using BeHereNow.Configuration;
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -24,7 +25,7 @@ namespace BeHereNow
 
         internal void Create_Screen()
         {
-            Plugin.Log.Debug("Create_Screen()");
+            //Plugin.Log.Debug("Create_Screen()");
 
             if (floatingScreen == null)
             {
@@ -44,13 +45,31 @@ namespace BeHereNow
                 platformLeaderboardViewController.didActivateEvent += PlatformLeaderboardViewController_didActivateEvent;
                 platformLeaderboardViewController.didDeactivateEvent += PlatformLeaderboardViewController_didDeactivateEvent;
 
-                Plugin.Log.Debug("Made screen");
+                LocalLeaderboardViewController localLeaderboardViewController = Resources.FindObjectsOfTypeAll<LocalLeaderboardViewController>().FirstOrDefault();
+                localLeaderboardViewController.didActivateEvent += LocalLeaderboardViewController_didActivateEvent;
+                localLeaderboardViewController.didDeactivateEvent += LocalLeaderboardViewController_didDeactivateEvent;
+
+                //Plugin.Log.Debug("Made screen");
             }
         }
 
+        private void LocalLeaderboardViewController_didActivateEvent(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
+        {
+            if (PluginConfig.Instance.enabled)
+            {
+                floatingScreen.gameObject.SetActive(true);
+            }
+        }
+
+        private void LocalLeaderboardViewController_didDeactivateEvent(bool removedFromHierarchy, bool screenSystemDisabling)
+        {
+            floatingScreen.gameObject.SetActive(false);
+        }
+
+
         private void PlatformLeaderboardViewController_didActivateEvent(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
         {
-            Plugin.Log.Debug("Screen active");
+            //Plugin.Log.Debug("Screen active");
 
             if (PluginConfig.Instance.enabled)
             {
@@ -60,7 +79,7 @@ namespace BeHereNow
 
         private void PlatformLeaderboardViewController_didDeactivateEvent(bool removedFromHierarchy, bool screenSystemDisabling)
         {
-            Plugin.Log.Debug("Screen not active");
+            //Plugin.Log.Debug("Screen not active");
 
             floatingScreen.gameObject.SetActive(false);
         }

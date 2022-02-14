@@ -9,6 +9,7 @@ namespace BeHereNow.Configuration
         public static PluginConfig Instance { get; set; }
         public virtual bool enabled { get; set; } = true;
 
+
         /// <summary>
         /// This is called whenever BSIPA reads the config from disk (including when file changes are detected).
         /// </summary>

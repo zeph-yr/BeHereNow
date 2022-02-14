@@ -11,6 +11,7 @@ namespace BeHereNow
 
         }
 
+
             [UIValue("enabled")]
         public bool Enabled
         {
@@ -20,6 +21,7 @@ namespace BeHereNow
                 PluginConfig.Instance.enabled = value;
             }
         }
+
 
         [UIAction("set_enabled")]
         void Set_Enabled(bool value)
@@ -34,7 +36,6 @@ namespace BeHereNow
             {
                 ScreenController.Instance.Hide();
             }
-            
         }
     }
 }
