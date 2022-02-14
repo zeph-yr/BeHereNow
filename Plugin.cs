@@ -15,6 +15,9 @@ namespace BeHereNow
     [Plugin(RuntimeOptions.DynamicInit)]
     public class Plugin
     {
+        //private static Sprite image;
+        //private static string file_path = @"C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\UserData\BeHereNow\image.jpg";
+
         // TODO: If using Harmony, uncomment and change YourGitHub to the name of your GitHub account, or use the form "com.company.project.product"
         //       You must also add a reference to the Harmony assembly in the Libs folder.
         // public const string HarmonyId = "com.github.YourGitHub.BeHereNow";
@@ -60,6 +63,15 @@ namespace BeHereNow
         {
             new GameObject("BeHereNowController").AddComponent<BeHereNowController>();
             //ApplyHarmonyPatches();
+
+            //BS_Utils.Utilities.BSEvents.lateMenuSceneLoadedFresh += BSEvents_lateMenuSceneLoadedFresh; ;
+        }
+
+        private void BSEvents_lateMenuSceneLoadedFresh(ScenesTransitionSetupDataSO obj)
+        {
+            Plugin.Log.Debug("Menu loaded");
+
+            ScreenController.Instance.Create_Screen();
         }
 
         /// <summary>
