@@ -1,5 +1,6 @@
 ﻿using BeatSaberMarkupLanguage;
 using BeatSaberMarkupLanguage.FloatingScreen;
+using BeHereNow.Configuration;
 using System.Linq;
 using UnityEngine;
 
@@ -10,9 +11,7 @@ namespace BeHereNow
         private FloatingScreen floatingScreen;
         private ScreenViewController screenViewController;
 
-
         public static ScreenController _instance { get; private set; }
-
         public static ScreenController Instance
         {
             get
@@ -23,14 +22,12 @@ namespace BeHereNow
             }
         }
 
-
-        public void Create_Screen()
+        internal void Create_Screen()
         {
             Plugin.Log.Debug("Create_Screen()");
 
             if (floatingScreen == null)
             {
-                // Make FloatingScreen:
                 Quaternion rotation = new Quaternion(0f, 0f, 0f, 0f);
                 rotation = Quaternion.AngleAxis(55, Vector3.up);
 
@@ -38,13 +35,11 @@ namespace BeHereNow
                 floatingScreen = FloatingScreen.CreateFloatingScreen(new Vector2(120, 90), false, new Vector3(3.4f, 1.30f, 1.95f), rotation);
                 GameObject.DontDestroyOnLoad(floatingScreen.gameObject);
 
-                // Make ViewControlller and give it to the FloatingScreen:
                 screenViewController = BeatSaberUI.CreateViewController<ScreenViewController>();
                 floatingScreen.SetRootViewController(screenViewController, HMUI.ViewController.AnimationType.None);
 
                 floatingScreen.gameObject.SetActive(false);
 
-                // Make FloatingScreen appear/disappear with leaderboard
                 PlatformLeaderboardViewController platformLeaderboardViewController = Resources.FindObjectsOfTypeAll<PlatformLeaderboardViewController>().FirstOrDefault();
                 platformLeaderboardViewController.didActivateEvent += PlatformLeaderboardViewController_didActivateEvent;
                 platformLeaderboardViewController.didDeactivateEvent += PlatformLeaderboardViewController_didDeactivateEvent;
@@ -56,12 +51,17 @@ namespace BeHereNow
         private void PlatformLeaderboardViewController_didActivateEvent(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
         {
             Plugin.Log.Debug("Screen active");
-            floatingScreen.gameObject.SetActive(true);
+
+            if (PluginConfig.Instance.enabled)
+            {
+                floatingScreen.gameObject.SetActive(true);
+            }
         }
 
         private void PlatformLeaderboardViewController_didDeactivateEvent(bool removedFromHierarchy, bool screenSystemDisabling)
         {
             Plugin.Log.Debug("Screen not active");
+
             floatingScreen.gameObject.SetActive(false);
         }
     }

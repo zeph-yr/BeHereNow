@@ -1,7 +1,7 @@
 ﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
 	<background bg='round-rect-panel' bg-color='#ff0000dd'>
 		<horizontal bg='round-rect-panel' bg-color='#ffffffdd'>
-			<img src="C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\UserData\BeHereNow\image.jpg" pref-width="100" pref-height="100" preserve-aspect="true"/>
+			<img src="C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\UserData\BeHereNow\image.jpg" pref-width='120' pref-height='90' preserve-aspect='true'/>
 		</horizontal>
 	</background>
 </bg>

@@ -1,0 +1,18 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<vertical vertical-fit='PreferredSize' preferred-height='55' size-delta-y='-15'>
+		<checkbox-setting value ='enabled' on-change='set_enabled' text='Enabled'></checkbox-setting>
+
+			<vertical vertical-fit='PreferredSize' preferred-height='15'>
+				<horizontal>
+					<text text='Come as you are.' font-color='#cc99ff' align='Center'/>
+				</horizontal>
+				<horizontal>
+					<text text='As who you want to be.' font-color='#cc99ff' align='Center'/>
+				</horizontal>
+			</vertical>
+		
+			<horizontal>
+				<text text='BeHereNow v1.0.0 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
+			</horizontal>
+	</vertical>
+</bg>

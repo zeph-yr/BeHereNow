@@ -1,10 +1,4 @@
-﻿using BeatSaberMarkupLanguage.Attributes;
-using BeatSaberMarkupLanguage.Components;
-using BeatSaberMarkupLanguage.Parser;
-using BeatSaberMarkupLanguage.ViewControllers;
-using HMUI;
-using System;
-using TMPro;
+﻿using BeatSaberMarkupLanguage.ViewControllers;
 
 namespace BeHereNow
 {
