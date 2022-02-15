@@ -2,7 +2,7 @@
 	<vertical vertical-fit='PreferredSize' preferred-height='55' size-delta-y='-15'>
 		<checkbox-setting value ='enabled' on-change='set_enabled' text='Enabled'></checkbox-setting>
 		<checkbox-setting value ='rank_enabled' on-change='set_rank_enabled' text='Show Ranks'></checkbox-setting>
-		<vertical vertical-fit='PreferredSize' preferred-height='15'>
+		<vertical vertical-fit='PreferredSize' preferred-height='12'>
 			<horizontal>
 				<text text='Come as you are.' font-color='#cc99ff' align='Center'/>
 			</horizontal>

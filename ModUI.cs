@@ -8,7 +8,7 @@ namespace BeHereNow
     {
         public ModUI()
         {
-
+            // Must have this constructor or bsml wont load
         }
 
 
@@ -21,7 +21,6 @@ namespace BeHereNow
                 PluginConfig.Instance.enabled = value;
             }
         }
-
 
         [UIAction("set_enabled")]
         void Set_Enabled(bool value)
@@ -38,6 +37,7 @@ namespace BeHereNow
             }
         }
 
+
         [UIValue("rank_enabled")]
         public bool Rank_Enabled
         {
@@ -48,14 +48,15 @@ namespace BeHereNow
             }
         }
 
-
         [UIAction("set_rank_enabled")]
         void Set_Rank_Enabled(bool value)
         {
             Rank_Enabled = value;
 
+            // Change opacity in ScreenViewController
             if (value)
             {
+                // We purposely made screenViewController internal so we can access it here 
                 ScreenController.Instance.screenViewController.opacity = "#ffffffdd";
                 ScreenController.Instance.screenViewController.Rank = "changed";
             }
@@ -64,8 +65,6 @@ namespace BeHereNow
                 ScreenController.Instance.screenViewController.opacity = "";
                 ScreenController.Instance.screenViewController.Rank = "changed";
             }
-
-            //ScreenViewController.PostParse();
         }
     }
 }
