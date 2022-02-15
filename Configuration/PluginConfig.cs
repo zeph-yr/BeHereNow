@@ -8,6 +8,7 @@ namespace BeHereNow.Configuration
     {
         public static PluginConfig Instance { get; set; }
         public virtual bool enabled { get; set; } = true;
+        public virtual bool rank_enabled { get; set; } = true;
 
 
         /// <summary>

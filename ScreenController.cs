@@ -9,8 +9,8 @@ namespace BeHereNow
 {
     internal class ScreenController
     {
-        private FloatingScreen floatingScreen;
-        private ScreenViewController screenViewController;
+        internal FloatingScreen floatingScreen;
+        internal ScreenViewController screenViewController;
 
         public static ScreenController _instance { get; private set; }
         public static ScreenController Instance

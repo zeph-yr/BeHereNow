@@ -12,7 +12,7 @@ namespace BeHereNow
         }
 
 
-            [UIValue("enabled")]
+        [UIValue("enabled")]
         public bool Enabled
         {
             get => PluginConfig.Instance.enabled;
@@ -36,6 +36,36 @@ namespace BeHereNow
             {
                 ScreenController.Instance.Hide();
             }
+        }
+
+        [UIValue("rank_enabled")]
+        public bool Rank_Enabled
+        {
+            get => PluginConfig.Instance.rank_enabled;
+            set
+            {
+                PluginConfig.Instance.rank_enabled = value;
+            }
+        }
+
+
+        [UIAction("set_rank_enabled")]
+        void Set_Rank_Enabled(bool value)
+        {
+            Rank_Enabled = value;
+
+            if (value)
+            {
+                ScreenController.Instance.screenViewController.opacity = "#ffffffdd";
+                ScreenController.Instance.screenViewController.Rank = "changed";
+            }
+            else
+            {
+                ScreenController.Instance.screenViewController.opacity = "";
+                ScreenController.Instance.screenViewController.Rank = "changed";
+            }
+
+            //ScreenViewController.PostParse();
         }
     }
 }
