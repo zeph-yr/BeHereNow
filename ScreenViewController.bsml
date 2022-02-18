@@ -2,7 +2,7 @@
 	<background bg='round-rect-panel' bg-color='#ff0000dd'>
 		<horizontal bg='round-rect-panel' bg-color='~rank'>
 			<text text='--------' font-color='#00000000'/>
-			<img src="C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\UserData\BeHereNow\image.png" pref-width='120' pref-height='90' preserve-aspect='true'/>
+			<img src="C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\UserData\BeHereNow\image.png" pref-width='120' pref-height='90' preserve-aspect='false'/>
 		</horizontal>
 	</background>
 </bg>
