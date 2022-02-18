@@ -11,7 +11,7 @@
 			</horizontal>
 		</vertical>
 		<horizontal>
-			<text text='Special request for Tseska. Thanks!' font-color='#ffff00ff' align='Center'></text>
+			<text text='Special request for Tseska. Thanks!' font-color='#ffff00ff' font-size='3' align='Center'></text>
 		</horizontal>
 		<horizontal>
 			<text text='BeHereNow v1.0.0 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
