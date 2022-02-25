@@ -1,7 +1,7 @@
 ﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
 	<vertical vertical-fit='PreferredSize' preferred-height='55' size-delta-y='-15'>
-		<checkbox-setting value ='enabled' on-change='set_enabled' text='Enabled'></checkbox-setting>
-		<checkbox-setting value ='rank_enabled' on-change='set_rank_enabled' text='Show Ranks'></checkbox-setting>
+		<checkbox-setting value ='enabled' on-change='set_enabled' text='Hide Leaderboard'></checkbox-setting>
+		<checkbox-setting value ='rank_enabled' on-change='set_rank_enabled' text='Hide Ranks'></checkbox-setting>
 		<vertical vertical-fit='PreferredSize' preferred-height='12'>
 			<horizontal>
 				<text text='Come as you are.' font-color='#cc99ff' align='Center'/>
@@ -14,7 +14,7 @@
 			<text text='Special request for Tseska. Thanks!' font-color='#ffff00ff' font-size='3' align='Center'></text>
 		</horizontal>
 		<horizontal>
-			<text text='BeHereNow v1.0.0 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
+			<text text='BeHereNow v1.0.1 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
 		</horizontal>
 	</vertical>
 </bg>

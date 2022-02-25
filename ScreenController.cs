@@ -34,10 +34,10 @@ namespace BeHereNow
             {
                 // Make a FloatingScreen
                 Quaternion rotation = new Quaternion(0f, 0f, 0f, 0f);
-                rotation = Quaternion.AngleAxis(55, Vector3.up);
+                rotation = Quaternion.AngleAxis(52, Vector3.up);
 
                 //Note: Size (100,100) and position (0f, 1.05f, 1.95f) is good for a huge-to-the-floor panel where the player is standing lol
-                floatingScreen = FloatingScreen.CreateFloatingScreen(new Vector2(120, 90), false, new Vector3(3.45f, 1.30f, 2.1f), rotation);
+                floatingScreen = FloatingScreen.CreateFloatingScreen(new Vector2(120, 90), false, new Vector3(3.45f, 1.29f, 2.1f), rotation);
                 GameObject.DontDestroyOnLoad(floatingScreen.gameObject);
 
 

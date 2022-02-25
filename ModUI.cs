@@ -54,7 +54,7 @@ namespace BeHereNow
             Rank_Enabled = value;
 
             // Change opacity in ScreenViewController
-            if (value)
+            if (value == false)
             {
                 // We purposely made screenViewController internal so we can access it here 
                 ScreenController.Instance.screenViewController.opacity = "#ffffffdd";

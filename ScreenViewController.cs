@@ -15,7 +15,7 @@ namespace BeHereNow
         // This constructor is actually not required if we didn't need to set initial values of anything
         public ScreenViewController()
         {
-            if (PluginConfig.Instance.rank_enabled)
+            if (PluginConfig.Instance.rank_enabled == false)
             {
                 opacity = "#ffffffdd";
             }
