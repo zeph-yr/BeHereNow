@@ -14,5 +14,8 @@
 - To use the blank dark screen, use the included template `image.png` or another transparent image and toggle on `Hide Ranks`
 - Requires BS_Utils, BSML
 
+## Origin Of The Name
+For this moment, focus only on the present without ruminating on the past or worrying about the future.
+
 ## About
 Comm'ed by Tseska. Thank you and I hope you enjoy using it 💖
