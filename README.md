@@ -12,7 +12,7 @@
 - Save multiple images in the directory and rename to swap (must close game before swapping)
 - To use the blank dark screen, use the included template `image.png` or another transparent image and toggle on `Hide Ranks`
 - There must be an `image.png`. Not having it will break the mod.
-- Requires BS_Utils, BSML
+- Requires BS_Utils, BSML. Make sure you have the latest version of BS Utils specific to your game version. If the screen appears anywhere without the leaderboard, check and update your BS Utils
 
 ## Origin Of The Name
 For this moment, focus only on the present without ruminating on the past or worrying about the future.
