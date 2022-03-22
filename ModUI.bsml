@@ -14,7 +14,7 @@
 			<text text='Special request for Tseska. Thanks!' font-color='#ffff00ff' font-size='3' align='Center'></text>
 		</horizontal>
 		<horizontal>
-			<text text='BeHereNow v1.0.1 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
+			<text text='BeHereNow v1.0.2 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
 		</horizontal>
 	</vertical>
 </bg>

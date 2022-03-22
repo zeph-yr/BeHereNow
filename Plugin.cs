@@ -30,8 +30,13 @@ namespace BeHereNow
             BeatSaberMarkupLanguage.GameplaySetup.GameplaySetup.instance.AddTab("BeHereNow", "BeHereNow.ModUI.bsml", ModUI.instance, BeatSaberMarkupLanguage.GameplaySetup.MenuType.Solo);
 
             BS_Utils.Utilities.BSEvents.lateMenuSceneLoadedFresh += BSEvents_lateMenuSceneLoadedFresh;
+            BS_Utils.Utilities.BSEvents.gameSceneLoaded += BSEvents_gameSceneLoaded;
         }
 
+        private void BSEvents_gameSceneLoaded()
+        {
+            ScreenController.Instance.floatingScreen.gameObject.SetActive(false); //Not sure why sometimes it shows up in the map lol
+        }
 
         private void BSEvents_lateMenuSceneLoadedFresh(ScenesTransitionSetupDataSO obj)
         {
