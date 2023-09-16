@@ -18,4 +18,6 @@
 For this moment, focus only on the present without ruminating on the past or worrying about the future.
 
 ## About
+Copyright © 2021 - 2023 Zephyr | www.xephai.com
+
 Comm'ed by Tseska. Thank you and I hope you enjoy using it 💖
